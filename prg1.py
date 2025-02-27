@@ -38,10 +38,10 @@ def detect_gesture(hand_landmarks, image_width, image_height):
         gestures["Palm"] = True
     
     if (
-        landmarks[mp_hands.HandLandmark.INDEX_FINGER_TIP][1] < landmarks[mp_hands.HandLandmark.INDEX_FINGER_TIP][1] and
-        landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_TIP][1] > landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_TIP][1] and
-        landmarks[mp_hands.HandLandmark.RING_FINGER_TIP][1] > landmarks[mp_hands.HandLandmark.RING_FINGER_TIP][1] and
-        landmarks[mp_hands.HandLandmark.PINKY_TIP][1] > landmarks[mp_hands.HandLandmark.PINKY_TIP][1]
+        landmarks[mp_hands.HandLandmark.INDEX_FINGER_TIP][1] < landmarks[mp_hands.HandLandmark.INDEX_FINGER_PIP][1] and
+        landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_TIP][1] > landmarks[mp_hands.HandLandmark.MIDDLE_FINGER_PIP][1] and
+        landmarks[mp_hands.HandLandmark.RING_FINGER_TIP][1] > landmarks[mp_hands.HandLandmark.RING_FINGER_PIP][1] and
+        landmarks[mp_hands.HandLandmark.PINKY_TIP][1] > landmarks[mp_hands.HandLandmark.PINKY_PIP][1]
     ):
         gestures["I"] = True
     
